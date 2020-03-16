@@ -2,9 +2,9 @@
 using System.IO;
 using System.Linq;
 
-namespace Rj.Directories
+namespace Rj.CoreLogic
 {
-    public class DirectoryFetcher
+    public class DirectoryFetcher : IFetcher
     {
         private readonly string directoryPattern;
         private readonly string path;
@@ -15,9 +15,9 @@ namespace Rj.Directories
             path = rootPath;
         }
 
-        public List<string> Fetch()
+        public IEnumerable<string> Fetch()
         {
-            return Directory.GetDirectories(path, directoryPattern).ToList();
+            return Directory.GetDirectories(path, directoryPattern);
         }
     }
 }

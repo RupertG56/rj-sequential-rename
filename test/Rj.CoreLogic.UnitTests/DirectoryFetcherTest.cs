@@ -1,6 +1,7 @@
 using Xunit;
+using System.IO;
 
-namespace Rj.Directories.UnitTests
+namespace Rj.CoreLogic.UnitTests
 {
     public class DirectoryFetcherTest
     {
@@ -19,6 +20,40 @@ namespace Rj.Directories.UnitTests
 
             // Assert
             Assert.Contains(expected, directories);
+        }
+
+        private void SetupTestFolderStructure(string basePath, string baseFolderName, int dirCount)
+        {
+            if (!Directory.Exists(basePath))
+            {
+                Directory.CreateDirectory(basePath);
+            }
+
+            for (var x = 1; x <= dirCount; x++)
+            {
+                string lastPart = $"{baseFolderName}{x}";
+                string directoryToCreate = Path.Combine(basePath, lastPart);
+                if (Directory.Exists(directoryToCreate)) continue;
+
+                Directory.CreateDirectory(directoryToCreate);
+            }
+        }
+
+        private void RemoveTestFolderStructure(string basePath, string baseFolderName, int dirCount)
+        {
+            for (var x = 1; x <= dirCount; x++)
+            {
+                string lastPart = $"{baseFolderName}{x}";
+                string directoryToDelete = Path.Combine(basePath, lastPart);
+                if (!Directory.Exists(directoryToDelete)) continue;
+
+                Directory.Delete(directoryToDelete);
+            }
+
+            if (Directory.Exists(basePath))
+            {
+                Directory.Delete(basePath);
+            }
         }
     }
 }

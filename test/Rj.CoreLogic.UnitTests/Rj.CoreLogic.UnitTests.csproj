@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Rj.Directories\Rj.Directories.csproj" />
+    <ProjectReference Include="..\..\src\Rj.CoreLogic\Rj.CoreLogic.csproj" />
   </ItemGroup>
 
 </Project>
