@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CD06945-8FEE-4D41-B523-33843D8A2725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.Directories", "src\Rj.Directories\Rj.Directories.csproj", "{19746381-9F18-4759-8BAE-BEAE5667DF0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.CoreLogic", "src\Rj.CoreLogic\Rj.CoreLogic.csproj", "{19746381-9F18-4759-8BAE-BEAE5667DF0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{82206F8F-DFBF-4930-B652-283911E34EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.Directories.UnitTests", "test\Rj.Directories.UnitTests\Rj.Directories.UnitTests.csproj", "{A968ACEA-C873-4941-95F0-C216BB129292}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.CoreLogic.UnitTests", "test\Rj.CoreLogic.UnitTests\Rj.CoreLogic.UnitTests.csproj", "{A968ACEA-C873-4941-95F0-C216BB129292}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
