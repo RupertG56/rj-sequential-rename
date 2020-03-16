@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace Rj.CoreLogic
@@ -17,7 +18,13 @@ namespace Rj.CoreLogic
 
         public IEnumerable<string> Fetch()
         {
-            throw new NotImplementedException();
+            var files = new List<string>();
+            foreach (var d in searchDirectories)
+            {
+                files.AddRange(Directory.GetFiles(d, searchPattern));
+            }
+
+            return files;
         }
     }
 }
