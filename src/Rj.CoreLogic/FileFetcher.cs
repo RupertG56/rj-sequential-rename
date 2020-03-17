@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace Rj.CoreLogic
 {
-    public class FileFetcher : IFetcher
+    public class FileFetcher : IFetcher<FileInfo>
     {
         private readonly IEnumerable<string> searchDirectories;
         private readonly string searchPattern;
@@ -16,12 +17,13 @@ namespace Rj.CoreLogic
             searchPattern = pattern;
         }
 
-        public IEnumerable<string> Fetch()
+        public IEnumerable<FileInfo> Fetch()
         {
-            var files = new List<string>();
+            var files = new List<FileInfo>();
             foreach (var d in searchDirectories)
             {
-                files.AddRange(Directory.GetFiles(d, searchPattern));
+                var fileInfos = Directory.GetFiles(d, searchPattern).Select(s => new FileInfo(s));
+                files.AddRange(fileInfos);
             }
 
             return files;

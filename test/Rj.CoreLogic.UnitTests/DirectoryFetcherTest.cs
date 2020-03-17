@@ -12,14 +12,22 @@ namespace Rj.CoreLogic.UnitTests
         [InlineData("C:\\Temp\\TestFolder\\testns1d4")]
         public void FetchReturnsDirectoriesMatchingPattern(string expected)
         {
-            // Arrange
-            var fetcher = new DirectoryFetcher("testns1*", "C:\\Temp\\TestFolder");
+            try
+            {
+                SetupTestFolderStructure("C:\\Temp\\TestFolder", "testns1d", 4);
+                // Arrange
+                var fetcher = new DirectoryFetcher("testns1*", "C:\\Temp\\TestFolder");
 
-            // Act
-            var directories = fetcher.Fetch();
+                // Act
+                var directories = fetcher.Fetch();
 
-            // Assert
-            Assert.Contains(expected, directories);
+                // Assert
+                Assert.Contains(expected, directories);
+            }
+            finally
+            {
+                RemoveTestFolderStructure("C:\\Temp\\TestFolder", "testns1d", 4);
+            }
         }
 
         private void SetupTestFolderStructure(string basePath, string baseFolderName, int dirCount)

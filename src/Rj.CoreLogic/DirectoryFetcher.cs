@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Rj.CoreLogic
 {
-    public class DirectoryFetcher : IFetcher
+    public class DirectoryFetcher : IFetcher<string>
     {
         private readonly string directoryPattern;
         private readonly string path;

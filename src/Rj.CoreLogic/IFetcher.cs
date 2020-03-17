@@ -2,8 +2,8 @@ namespace Rj.CoreLogic
 {
     using System.Collections.Generic;
 
-    public interface IFetcher
+    public interface IFetcher<TOut>
     {
-        IEnumerable<string> Fetch();
+        IEnumerable<TOut> Fetch();
     }
 }
