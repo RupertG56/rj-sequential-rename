@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CD06945-8FEE-4D41-B523-33843D8A2725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.CoreLogic", "src\Rj.CoreLogic\Rj.CoreLogic.csproj", "{19746381-9F18-4759-8BAE-BEAE5667DF0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rj.CoreLogic", "src\Rj.CoreLogic\Rj.CoreLogic.csproj", "{19746381-9F18-4759-8BAE-BEAE5667DF0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{82206F8F-DFBF-4930-B652-283911E34EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.CoreLogic.UnitTests", "test\Rj.CoreLogic.UnitTests\Rj.CoreLogic.UnitTests.csproj", "{A968ACEA-C873-4941-95F0-C216BB129292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rj.CoreLogic.UnitTests", "test\Rj.CoreLogic.UnitTests\Rj.CoreLogic.UnitTests.csproj", "{A968ACEA-C873-4941-95F0-C216BB129292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rj.BatchFileRename.App", "src\Rj.BatchFileRename.App\Rj.BatchFileRename.App.csproj", "{28F148E3-6FCD-4424-A181-BC4AEE13D235}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,9 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{19746381-9F18-4759-8BAE-BEAE5667DF0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -48,9 +47,28 @@ Global
 		{A968ACEA-C873-4941-95F0-C216BB129292}.Release|x64.Build.0 = Release|Any CPU
 		{A968ACEA-C873-4941-95F0-C216BB129292}.Release|x86.ActiveCfg = Release|Any CPU
 		{A968ACEA-C873-4941-95F0-C216BB129292}.Release|x86.Build.0 = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|x64.Build.0 = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Debug|x86.Build.0 = Debug|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|x64.ActiveCfg = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|x64.Build.0 = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|x86.ActiveCfg = Release|Any CPU
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{19746381-9F18-4759-8BAE-BEAE5667DF0E} = {8CD06945-8FEE-4D41-B523-33843D8A2725}
 		{A968ACEA-C873-4941-95F0-C216BB129292} = {82206F8F-DFBF-4930-B652-283911E34EE5}
+		{28F148E3-6FCD-4424-A181-BC4AEE13D235} = {8CD06945-8FEE-4D41-B523-33843D8A2725}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FC06A84-5AE5-47BD-A215-96F978C6E8A8}
 	EndGlobalSection
 EndGlobal
